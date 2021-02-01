@@ -1,113 +1,19 @@
 <!doctype html>
 <html>
-  
 <head>
+  <!-- CSS Will go under here in style tags-->
   <style>
-  
-    :root {
-      /*Put variables here*/
-      
-    }
-    * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family: 'Roboto Mono', monospace;
-    }
-    body {
-      background:lightgray;
-    }
-    header {
-      padding:2rem;
-      text-align:center;
-    }
-    nav {
-      background:black;
-      color:white;
-    }
-    footer {
-      background:black;
-      color:white;
-      padding:3rem;
-      min-height:10vh;
-    }
-    .container {
-      background:burlywood;
-      padding:1rem;
-      min-height:60vh;
-      width:80%;
-      margin:auto;
-    }
-    .section-header {
-      padding:1.25rem;
-      font-size:1.75rem;
-      border-bottom:1px lightgray solid;
-    }
-    .section-container {
-      display:flex;
-      flex-direction:row;
-      flex-wrap:wrap;
-      justify-content:flex-start;
-      align-items:stretch;
-      padding:1.25rem;
-    }
-    .section-item {
-      flex:0 0 30%;
-      border:1px lightgray solid;
-      border-radius:12px;
-      text-align:center;
-      background:white;
-      box-shadow:10px 5px 5px 0px rgba(0,0,0,0.25);
-    }
-    .section-item:hover {
-      border:3px yellow solid;
-      box-shadow:16px 8px 8px 0px rgba(0,0,0,0.25);
-      background:lightyellow;
-    }
-    .section-item a {
-      color:black;
-      text-decoration:none;
-    }
-    .section-icon {
-      padding:1rem;
-    }
-    .section-icon i {
-      font-size:20vh;
-    }
-    .section-item h4 {
-      background-color:lightgrey;
-      padding:1rem;
-      font-size:1.75rem;
-    }
-    .section-item p {
-      padding:1rem;
-      font-size:1.15rem;
-      line-height:2rem;
-    }
-    
-    @media only screen and (max-width:800px) {
-      .container {
-        background:darkred;
-        color:white;
-        width:100%;
-      }
-      .section-container {
-        flex-direction:colum;
-        justify-content:center;
-      }
-      .section-item {
-        flex-basis:92%;
-      }
-    }
-    
-    
+
   </style>
   <!-- Put the link tage here-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
-  <title>PAGE TITLE</title>
+<link type="text/css" rel="stylesheet" href="css/portfolio.css">
+
+  <title>Portfolio Home Page</title>
+  
   
 </head>
 <body>
@@ -117,7 +23,11 @@
   </header>
   
   <nav>
-    Naw Section
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="contact.html">Contact Me</a></li>
+    </ul>
   </nav>
   <div class="container">
     <!-- Put assignment specific code here-->

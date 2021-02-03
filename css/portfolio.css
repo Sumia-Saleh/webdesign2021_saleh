@@ -96,6 +96,54 @@
     font-size:1.15rem;
     line-height:2rem;
   }
+  .row {
+    display:flex;
+    flex-wrap:nowrap;
+    flex-direction:row;
+    justify-content: stretch;
+    margin:2vh auto;
+  }
+  .media {
+    flex:0 0 40%;
+  }
+  .media img {
+    display:block;
+    width:92%;
+    max-width:400px;
+    margin:auto;
+  }
+  .text {
+    flex:0 0 60%;
+    padding:3vh;
+    text-align:center;
+  }
+  .text h3 {
+    font-size:3rem;
+    padding:1vh 0;
+  }
+  .text p {
+    font-size:1.5rem;
+    line-height:2.25rem;
+    padding:2vh 0;
+  }
+  .row-button {
+    background:darkred;
+    color:white;
+    display:block;
+    padding:1.25rem;
+    margin:auto;
+    text-decoration:none;
+    max-width:15vh;
+    text-align:center;
+    font-size:1.25rem;
+    border-radius:8px;
+    transition:background-color .5s ease;
+  }
+  .row-button:hover {
+    background-color:rgba(139, 0, 0, 0.5);
+    color:darkred;
+    box-shadow:3px 11px 10px -1px rgba(100, 100, 100, 0.69);
+  }
   
   @media only screen and (max-width:800px) {
     .container {

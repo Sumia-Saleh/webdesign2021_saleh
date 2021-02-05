@@ -174,8 +174,8 @@
   .contact-item:hover{
     background-color:lightpink;
   }
-  .contact-item a:hover:before {
-    content: -->;
+  .contact-item a:hover::before {
+    content:"-->";
   }
   
   @media only screen and (max-width:800px) {

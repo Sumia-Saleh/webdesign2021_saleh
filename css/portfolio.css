@@ -1,6 +1,10 @@
   :root {
     /*Put variables here*/
-    
+    --main-color:#FFA69E;
+    --accent-1:#12030B;
+    --accent-2:#CA6873;
+    --accent-3:#AA4465;
+    --accent-4:#ff85b1;
   }
   * {
     margin:0;
@@ -9,14 +13,14 @@
     font-family: 'Roboto Mono', monospace;
   }
   body {
-    background:lightgray;
+    background:var(--main-color);
   }
   header {
     padding:2rem;
   text-align:center;
   }
   nav {
-    background:black;
+    background:var(--accent-1);
     color:white;
   }
   nav ul {
@@ -38,13 +42,13 @@
     background-color:rgba(211, 211, 211, .4);
   }
   footer {
-    background:black;
+    background:var(--accent-1);
     color:white;
     padding:3rem;
     min-height:10vh;
   }
   .container {
-  background:burlywood;
+  background:var(--accent-2);
   padding:1rem;
   min-height:60vh;
   width:80%;
@@ -53,7 +57,7 @@
   .section-header {
     padding:1.25rem;
     font-size:1.75rem;
-    border-bottom:1px lightgray solid;
+    border-bottom:1px palevioletred;
   }
   .section-container {
     display:flex;
@@ -65,16 +69,16 @@
   }
   .section-item {
     flex:0 0 30%;
-    border:1px lightgray solid;
+    border:1px palevioletred;
     border-radius:12px;
     text-align:center;
     background:white;
     box-shadow:10px 5px 5px 0px rgba(0,0,0,0.25);
   }
   .section-item:hover {
-    border:3px yellow solid;
+    border:3px palevioletred solid;
     box-shadow:16px 8px 8px 0px rgba(0,0,0,0.25);
-    background:lightyellow;
+    background:blanchedalmond;
   }
   .section-item a {
   color:black;
@@ -87,7 +91,7 @@
     font-size:20vh;
   }
   .section-item h4 {
-    background-color:lightgrey;
+    background-color:#ffc8dd;
     padding:1rem;
     font-size:1.75rem;
   }
@@ -127,7 +131,7 @@
     padding:2vh 0;
   }
   .row-button {
-    background:darkred;
+    background:var(--accent-1);
     color:white;
     display:block;
     padding:1.25rem;
@@ -140,9 +144,9 @@
     transition:background-color .5s ease;
   }
   .row-button:hover {
-    background-color:rgba(139, 0, 0, 0.5);
-    color:darkred;
-    box-shadow:3px 11px 10px -1px rgba(100, 100, 100, 0.69);
+    background-color:rgba(255, 133, 178, 0.5);
+    color:black;
+    box-shadow:3px 11px 10px -1px rgba(133,24,64, 0.69);
   }
   .contact {
     flex:0 0 60%;
@@ -172,7 +176,7 @@
     font-size:2rem;
   }
   .contact-item:hover{
-    background-color:lightpink;
+    background-color:var(--accent-4);
   }
   .contact-item a:hover::before {
     content:"-->";
@@ -180,16 +184,27 @@
   
   @media only screen and (max-width:800px) {
     .container {
-      background:darkred;
-      color:white;
       width:100%;
+      margin:auto;
     }
     .section-container {
-      flex-direction:colum;
+      flex-direction:column;
       justify-content:center;
     }
     .section-item {
       flex-basis:92%;
+    }
+    .row {
+      flex-direction:column;
+    }
+    .section-header {
+      text-align:center;
+    }
+    .row-button {
+      max-width:60vw;
+    }
+    .contact {
+      align-items:center;
     }
   }
   

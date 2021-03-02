@@ -4,75 +4,90 @@
   <!-- CSS Will go under Here in STYlE Tags -->
   <style>
   
-    :root {
-      /*Put variables here*/
-      
-    }
-    * {
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
-    body {
-      background:lightgray;
-    }
-    header {
-      padding:2rem;
-      text-align:center;
-    }
-    nav {
-      background:black;
-      color:white;
-    }
-    footer {
-      background:black;
-      color:white;
-      padding:3rem;
-      min-height:10vh;
-    }
-    .container {
-      background:burlywood;
-      padding:1rem;
-      min-height:60vh;
-      width:80%;
-      margin:auto;
-    }
-    
-    @media only screen and (max-width:800px) {
-      .container {
-        background:darkred;
-        color:white;
-        width:100%;
-      }
-    }
     
     
     
   </style>
   <!-- Put the Link Tags Here -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+  <link type="text/css" rel="stylesheet" href="css/cardealer.css">
   <title>Car Dealer Home</title>
   
 </head>
 <body>
   <header>
-    Header
+    Call us Anytime: <a href="tell:+15861112222">(586)111-2222</a>
   </header>
   <nav>
-    Naw Section
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="cars.html">Vehicles</a></li>
+      <li><a href="deals.html">Hot Deals</a></li>
+      <li><a href="team.html">Our Team</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
   </nav>
-  <div class="container">
-    <!-- Put assignment specific code here-->
-    <h1>Car Dealer</h1>
+  <div class="cover-photo">
+    
+    <div class="overlay">
+      
+      <div class="overlay-inner">
+        <h1>Auto Experts</h1>
+        <p>We Provid You Buy!</p>
+        <a class="cta-button" href="cars.html">View our Cars >></a>
+      </div>
+      
+    </div><!-- End overlay-->
     
     
-    
-    
+  </div><!-- End cover photo-->
   
+  <div class="row">
+    
+    <div class="media">
+      <img src="images/carPlaceholder.png" alt="#">
+    </div>
+    <div class="text">
+      <h2>Hot Deals Waiting for you!</h2>
+      <p>
+        We provide the best deals for our customers. Buy on the spot deals that are one in a life time.
+      </p>
+      <a class="cta-button" href="deals.html">View our Hot Deals >></a>
+    </div>
+    
+  </div><!-- End of a row-->
   
+  <div class="row row-dark">
+    
+    <div class="text">
+      <h2>We have the best team in town!</h2>
+      <p>
+        We fix any issues that our customers face because your problem is our problem. Talk to us for any issues you are facing we will never turn our backs on you.
+      </p>
+      <a class="cta-button" href="team.html">Meet our Team >></a>
+    </div>
+    
+    <div class="media">
+      <img src="images/carPlaceholder.png" alt="#">
+    </div>
+    
+  </div><!-- End of a row-->
   
-  </div>
+  <div class="row">
+    
+    <div class="media">
+      <img src="images/carPlaceholder.png" alt="#">
+    </div>
+    <div class="text">
+      <h2>Three locations to serve you!</h2>
+      <p>
+        We are only found in Michigan so stop by at any of our locations to see us. We welcome all that come happily.
+      </p>
+      <a class="cta-button" href="contact.html">Find a Location >></a>
+    </div>
+    
+  </div><!-- End of a row-->
+  
   <footer>
     Made in FHS Web Design
   </footer>

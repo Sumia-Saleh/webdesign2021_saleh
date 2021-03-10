@@ -143,6 +143,74 @@
       padding:1rem;
       max-width:50%;
     }
+    /* Cars Page*/
+    .car-section-header {
+      font-size:2rem;
+      padding:2vh;
+      border-bottom:1px solid black;
+    }
+    .car-container {
+      display:flex;
+      flex-wrap:wrap;
+      flex-direction:row;
+      align-items:stretch;
+      justify-content:flex-start;
+      width:90%;
+      margin:2vh auto;
+    }
+    .car-item {
+      width:30%;
+      margin:1rem;
+      background:lightgrey;
+      overflow:hidden;
+      border-radius:12px;
+    }
+    .car-image {
+      position:relative;
+      width:100%;
+      height:30vh;
+    }
+    .car-image img {
+      display:block;
+      height:100%;
+    }
+    .car-overlay {
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color:rgba(0,0,0,.6);
+      color:white;
+      text-align:center;
+      font-size:1.25rem;
+      overflow:hidden;
+      width:100%;
+      height:0;
+      transition:.5s ease;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .car-item:hover .car-overlay {
+      height:100%;
+    }
+    .car-overlay p {
+      width:90%;
+    }
+    .car-overlay .cta-button {
+      font-size:.75rem;
+      padding:.5rem;
+      width:70%;
+    }
+    .car-text h4 {
+      font-size:1.75rem;
+      padding:.5rem;
+    }
+    .car-text p {
+      font-size:1.25rem;
+      padding:.5rem;
+      line-height:1.75rem;
+    }
     
     @media only screen and (max-width:800px) {
       .container {

@@ -211,6 +211,49 @@
       padding:.5rem;
       line-height:1.75rem;
     }
+    /* Deals Page CSS*/
+    .deals-container {
+      display:flex;
+      flex-flow:row wrap;
+      gap:2.5vh 1vw;
+      width:80%;
+      margin:2vh auto;
+    }
+    .deals-item {
+      flex:0 0 45%;
+      position:relative;
+    }
+    .deals-item img {
+      display:block;
+      width:100%;
+    }
+    .deals-overlay {
+      position:absolute;
+      bottom:0;
+      right:0;
+      background-color:rgba(0, 0, 0, .6);
+      color:white;
+      text-align:center;
+      font-size:1.25rem;
+      overflow:hidden;
+      width:0;
+      height:0;
+      transition:.5s ease;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+    }
+    .deals-item:hover .deals-overlay {
+      height:100%;
+      width:50%;
+    }
+    .deals-overlay .cta-button {
+      width:90%;
+      padding:1vh;
+      font-size:1rem;
+    }
+    
     
     @media only screen and (max-width:800px) {
       .container {

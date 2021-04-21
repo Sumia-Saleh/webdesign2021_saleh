@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+  <!--CSS will go uder Here in STYLE Tags-->
+  <style>
+  
+    :root {
+      /*Put variables here*/
+      
+    }
+    * {
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+    body {
+      background:lightgray;
+    }
+    header {
+      padding:2rem;
+      text-align:center;
+    }
+    nav {
+      background:black;
+      color:white;
+    }
+    footer {
+      background:black;
+      color:white;
+      padding:3rem;
+      min-height:10vh;
+    }
+    .container {
+      background:burlywood;
+      padding:1rem;
+      min-height:60vh;
+      width:80%;
+      margin:auto;
+    }
+    
+    /*New CSS -- Cards */
+    .pageHeader {
+      text-align:center;
+      padding:2vh;
+    }
+    .card-container {
+      display:flex;
+      flex-flow: row nowrap;
+      gap:1vw;
+      padding: 1vw;
+    }
+    .card-container > * {
+      width:100%;
+      text-align:center;
+      font-size:1.25rem;
+    }
+    .card {
+      border:1px solid black;
+      border-radius:12px;
+      overflow:hidden;
+    }
+    .card-body {
+      min-height:25vh;
+      background:white;
+      padding:2vh;
+    }
+    .card-title {
+      margin:0;
+      background:darkmagenta;
+      color:white;
+      font-size:1.5rem;
+      padding:2.5vh;
+    }
+    
+    /*Button CSS*/
+    .button-container {
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:center;
+      gap:1vw;
+      padding: 1vw;
+      border-top:3px black dotted;
+      margin:5vh;
+    }
+    .button-container > * {
+      flex-basis:33.333%;
+      max-width:20vw;
+      font-size:1.25rem;
+      padding:2vh;
+      border-radius:12px;
+    }
+    .button-container button {
+      background:darkslategrey;
+      color:white;
+    }
+    .button-container button:hover {
+      background:rgba(47,79,70, .7);
+      box-shadow:7px 6px 5px 0px rgba(0, 0, 0, 0.42);
+    }
+    
+    /*Stuff for later*/
+    .hidden {
+      display:none;
+    }
+    .show {
+      display:block;
+    }
+    
+    
+    @media only screen and (max-width:800px) {
+      .container {
+        background:darkred;
+        color:white;
+        width:100%;
+      }
+      .card-container {
+        flex-flow:column nowrap;
+      }
+    }
+    
+    
+    
+  </style>
+  <!--Put the Link Tags Here-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Javescript Intro</title>
+</head>
+<body>
+  
+  <header>
+    Header
+  </header>
+  <nav>
+    Naw Section
+  </nav>
+  <div class="container" id="container">
+    <!--Put assignmnet specific code here-->
+    <h1 class="pageHeader" id="pageHeader">Intro to JaveScript</h1>
+    
+    <div class="card-container">
+      
+      <!--Start of a card-->
+      <div class="card" id="card1">
+        <div class="card-body">
+          <p>
+            Generic card text
+          </p>
+        </div>
+        
+        <div class="card-footer">
+          <h3 class="card-title">Card #1 Title</h3>
+        </div>
+      </div>
+      <!--End of a card-->
+      
+      <!--Start of a card-->
+      <div class="card" id="card2">
+        <div class="card-body">
+          <p>
+            Generic card text
+          </p>
+        </div>
+        
+        <div class="card-footer">
+          <h3 class="card-title">Card #2 Title</h3>
+        </div>
+      </div>
+      <!--End of a card-->
+      
+      <!--Start of a card-->
+      <div class="card" id="card3">
+        <div class="card-body">
+          <p>
+            Generic card text
+          </p>
+        </div>
+        
+        <div class="card-footer">
+          <h3 class="card-title">Card #3 Title</h3>
+        </div>
+      </div>
+  
+      <!--End of a card-->
+      
+    </div> <!--End of a card container-->
+    <div class="button-container">
+      <button onclick="changeBody()">Change Body</button>
+      <button onclick="changeTitle()">Change Title</button>
+      <button onclick="darkContainer()">Dark Container</button>
+      
+      <button onclick="changeCardBorder()">Change Card Borders</button>
+      <button onclick="changeCardTitles()">Change Card Titles</button>
+      <button onclick="changeCardBody()">Change Card bodies</button>
+      
+      <button onclick="changeCard(0)">Change Card 1</button>
+      <button onclick="changeCard(1)">Change Card 2</button>
+      <button onclick="changeCard(2)">Change Card 3</button>
+      
+      <button onclick="hideOneCard(0)">Hide Card 1</button>
+      <button onclick="hideOneCard(1)">Hide Card 2</button>
+      <button onclick="hideOneCard(2)">Hide Card 3</button>
+      
+      <button onclick="showOneCard(0)">Show Card 1</button>
+      <button onclick="showOneCard(1)">Show Card 2</button>
+      <button onclick="showOneCard(2)">Show Card 3</button>
+      
+      <button onclick="hideAllCards()">Hide All Cards</button>
+      <button onclick="showAllCards()">Show All Cards</button>
+      
+    </div>
+    
+    
+    
+    
+    
+  </div><!--End of the container-->
+  <footer>
+    Made in FHS Web Design
+  </footer>
+  
+  <script>
+    function changeBody() {
+      document.body.style.backgroundColor = "red";
+    }
+    
+    function changeTitle() {
+      const myTitle = document.getElementById("pageHeader");
+      myTitle.innerHTML = "Hi it's Tuesday";
+    }
+    
+    function darkContainer() {
+      const myContainer = document. getElementById("container");
+      const myTitle = document.getElementById("pageHeader");
+      
+      myContainer.style.backgroundColor = "black";
+      myTitle.style.color = "white";
+    }
+    
+    /*Part 2*/
+    function changeCardBorder() {
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(c => c.style.border = "7px solid red");
+    }
+    
+    function changeCardTitles() {
+      const titles = document.querySelectorAll(".card-title");
+      titles.forEach(t => t.style.backgroundColor = "lightblue");
+      titles.forEach(t => t.innerHTML = "Is it Friday yet...");
+    }
+    
+    function changeCardBody() {
+      const cardbodies = document.querySelectorAll(".card-body");
+      cardbodies.forEach(cb => cb.style.backgroundColor = "darkgrey");
+      cardbodies.forEach(cb => cb.style.fontSize = "20px");
+      cardbodies.forEach(cb => cb.style.innerHTML = "Pizza");
+      cardbodies.forEach(cb => cb.style.minHeight = "50vh");
+    }
+    
+    /*Part 3*/
+    function changeCard(cardNumber) {
+      const cards = document.querySelectorAll(".card");
+      cards[cardNumber].querySelector(".card-body").style.backgroundColor = "maroon";
+      cards[cardNumber].querySelector(".card-title").style.backgroundColor = "black";
+      cards[cardNumber].querySelector(".card-body").style.color = "white";
+      cards[cardNumber].querySelector(".card-body").innerHTML = "I Changed card #" +(cardNumber+1);
+      cards[cardNumber].querySelector(".card-title").innerHTML = "#" + (cardNumber+1)  + " card title";
+      
+    }
+    
+    function hideOneCard(cardNumber) {
+      const cards = document.querySelectorAll(".card");
+      cards[cardNumber].classList.add("hidden");
+      cards[cardNumber].classList.remove("show");
+      
+    }
+    
+    function showOneCard(cardNumber) {
+      const cards = document.querySelectorAll(".card");
+      cards[cardNumber].classList.remove("hidden");
+      cards[cardNumber].classList.add("show");
+      
+    }
+    
+    function showAllCards() {
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(c => c.classList.remove("hidden"));
+      cards.forEach(c => c.classList.add("show"));
+    }
+    
+    function hideAllCards() {
+      const cards = document.querySelectorAll(".card");
+      cards.forEach(c => c.classList.add("hidden"));
+      cards.forEach(c => c.classList.remove("show"));
+    }
+  </script>
+  
+  
+  
+<!--Don't dekete me please-->
+</body>
+
+</html>

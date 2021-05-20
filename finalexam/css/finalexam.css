@@ -170,6 +170,69 @@
       line-height:1.75rem;
       padding:2vh;
     }
+    /*Menu Page*/
+    .menu-section-header {
+      font-size:2rem;
+      padding:2vh;
+      border-bottom:1px solid black;
+    }
+    .menu-container {
+      display:flex;
+      flex-wrap:wrap;
+      flex-direction:row;
+      align-items:stretch;
+      justify-content:flex-start;
+      width:90%;
+      margin:2vh auto;
+    }
+    .menu-item {
+      width:30%;
+      margin:1rem;
+      background:var(--main-color);
+      overflow:hidden;
+      border-radius:12px;
+    }
+    .menu-image {
+      position:relative;
+      width:100%;
+      height:30vh;
+    }
+    .menu-image img {
+      display:block;
+      height:100%;
+    }
+    .menu-overlay {
+      position:absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      background-color:rgba(0,0,0,.6);
+      color:pink;
+      text-align:center;
+      font-size:2.25rem;
+      overflow:hidden;
+      width:100%;
+      height:0;
+      transition:.5s ease;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+    .menu-item:hover .menu-overlay {
+      height:100%;
+    }
+    .menu-overlay p {
+      width:90%;
+    }
+    .menu-text h4 {
+      font-size:1.75rem;
+      padding:.5rem;
+    }
+    .menu-text p {
+      font-size:1.25rem;
+      padding:.5rem;
+      line-height:1.75rem;
+    }
     @media only screen and (max-width:800px) {
       .container {
         background:var(--main-color);
